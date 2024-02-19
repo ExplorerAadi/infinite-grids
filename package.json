@@ -16,7 +16,6 @@
   "main": "dist/infinite-grids.js",
   "types": "./dist/components/InfiniteGrids/index.d.ts",
   "dependencies": {
-    "@react-hook/window-size": "^3.1.1",
     "react-infinite-scroll-component": "^6.1.0"
   },
   "peerDependencies": {
@@ -35,6 +34,7 @@
     "eslint-plugin-react-refresh": "^0.4.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-use": "^17.5.0",
     "typescript": "^5.3.3",
     "vite": "^5.0.12",
     "vite-plugin-dts": "^3.7.2"

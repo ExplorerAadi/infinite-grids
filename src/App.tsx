@@ -1,12 +1,23 @@
 import { useState } from "react";
-import { InfiniteGrids, Item } from "./component/InfiniteGrids";
+import { useWindowSize } from "react-use";
+import { InfiniteGrids, Item } from "../lib/components/InfiniteGrids";
 
 export const App = () => {
   const [items, setItems] = useState(initialItems);
+  const { width } = useWindowSize();
 
   const loadMore = () => {
     setTimeout(() => setItems([...items, ...initialItems]), 2000);
   };
+
+  const numberOfColumns =
+    width && width < 420
+      ? 1
+      : width && width > 420 && width < 768
+      ? 2
+      : width && width > 768 && width < 1024
+      ? 3
+      : 4;
 
   return (
     <div style={{ padding: 16 }}>
@@ -30,6 +41,7 @@ export const App = () => {
           </div>
         )}
         loader={<h4>Loading...</h4>}
+        numberOfColumns={numberOfColumns}
       />
     </div>
   );

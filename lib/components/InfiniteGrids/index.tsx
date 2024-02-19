@@ -1,5 +1,4 @@
 import React from "react";
-// import { useWindowSize } from "@react-hook/window-size";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 export const InfiniteGrids = ({
@@ -10,18 +9,8 @@ export const InfiniteGrids = ({
   verticalGap,
   renderItem,
   loader,
+  numberOfColumns,
 }: InfiniteGridsProps) => {
-  // const [width] = useWindowSize();
-
-  const numberOfColumns = 3;
-  // width && width < 420
-  //   ? 1
-  //   : width && width > 420 && width < 768
-  //   ? 2
-  //   : width && width > 768 && width < 1024
-  //   ? 3
-  //   : 4;
-
   return (
     <InfiniteScroll
       dataLength={items.length}
@@ -72,6 +61,7 @@ export interface InfiniteGridsProps {
   verticalGap: number;
   renderItem: (item: Item) => JSX.Element;
   loader: JSX.Element;
+  numberOfColumns: number;
 }
 
 export interface Item {
