@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { InfiniteGrids, Item } from "./InfiniteGrids";
+import { InfiniteGrids, Item } from "./component/InfiniteGrids";
 
 export const App = () => {
   const [items, setItems] = useState(initialItems);

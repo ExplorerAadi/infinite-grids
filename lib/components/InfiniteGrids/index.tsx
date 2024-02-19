@@ -1,5 +1,5 @@
-import { Fragment } from "react";
-import { useWindowSize } from "@react-hook/window-size";
+import React from "react";
+// import { useWindowSize } from "@react-hook/window-size";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 export const InfiniteGrids = ({
@@ -10,25 +10,17 @@ export const InfiniteGrids = ({
   verticalGap,
   renderItem,
   loader,
-}: {
-  items: Item[];
-  loadMore: () => void;
-  hasMoreItems?: boolean;
-  horizontalGap: number;
-  verticalGap: number;
-  renderItem: (item: Item) => JSX.Element;
-  loader: JSX.Element;
-}) => {
-  const [width] = useWindowSize();
+}: InfiniteGridsProps) => {
+  // const [width] = useWindowSize();
 
-  const numberOfColumns =
-    width && width < 420
-      ? 1
-      : width && width > 420 && width < 768
-      ? 2
-      : width && width > 768 && width < 1024
-      ? 3
-      : 4;
+  const numberOfColumns = 3;
+  // width && width < 420
+  //   ? 1
+  //   : width && width > 420 && width < 768
+  //   ? 2
+  //   : width && width > 768 && width < 1024
+  //   ? 3
+  //   : 4;
 
   return (
     <InfiniteScroll
@@ -57,11 +49,13 @@ export const InfiniteGrids = ({
             }}
           >
             {items.map((item, i) => (
-              <Fragment key={item.id}>
+              <React.Fragment key={item.id}>
                 {i % numberOfColumns === index && (
-                  <Fragment key={item.id}>{renderItem(item)}</Fragment>
+                  <React.Fragment key={item.id}>
+                    {renderItem(item)}
+                  </React.Fragment>
                 )}
-              </Fragment>
+              </React.Fragment>
             ))}
           </div>
         ))}
@@ -69,6 +63,16 @@ export const InfiniteGrids = ({
     </InfiniteScroll>
   );
 };
+
+export interface InfiniteGridsProps {
+  items: Item[];
+  loadMore: () => void;
+  hasMoreItems?: boolean;
+  horizontalGap: number;
+  verticalGap: number;
+  renderItem: (item: Item) => JSX.Element;
+  loader: JSX.Element;
+}
 
 export interface Item {
   id: string;
