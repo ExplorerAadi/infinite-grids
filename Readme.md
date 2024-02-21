@@ -6,6 +6,10 @@ Masonry layout with infinite loading.
 
 It's a simple and easy to use library that allows you to create a masonry layout with infinite loading while controlling everything about the nodes being rendered in the layout.
 
+<img width="911" alt="image" src="https://github.com/ExplorerAadi/infinite-grids/assets/52901335/8acab796-30c0-4b8e-ab32-d4c93603af02">
+
+
+
 ## Installation
 
 ```bash
