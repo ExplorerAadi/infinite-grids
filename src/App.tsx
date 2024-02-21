@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useWindowSize } from "react-use";
-import { InfiniteGrids, Item } from "../lib/components/InfiniteGrids";
+import { InfiniteGrids, Item } from "infinite-grids";
 
 export const App = () => {
   const [items, setItems] = useState(initialItems);
