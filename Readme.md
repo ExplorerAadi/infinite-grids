@@ -1,6 +1,6 @@
 [](https://github.com/ExplorerAadi/infinite-grids/assets/52901335/08f7d3ed-16e0-4201-9d2b-a1b2dfa31262)
 
-# infinite-grids
+# infinite-grids <a href="https://www.npmjs.com/package/infinite-grids"><img alt="NPM" src="https://img.shields.io/npm/v/infinite-grids.svg"></a>
 
 Masonry layout with infinite loading.
 
