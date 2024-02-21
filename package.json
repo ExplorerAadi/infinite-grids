@@ -1,6 +1,6 @@
 {
   "name": "infinite-grids",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -42,7 +42,15 @@
     "type": "git",
     "url": "https://github.com/ExplorerAadi/infinite-grids"
   },
-  "keywords": [],
+  "keywords": [
+    "masonry",
+    "masonry grid",
+    "react masonry component",
+    "image",
+    "grid",
+    "infinite",
+    "infinite list"
+  ],
   "author": "Aditya Raj",
   "bugs": {
     "url": "https://github.com/ExplorerAadi/infinite-grids/issues"
