@@ -21,7 +21,7 @@ pnpm add infinite-grids
 ```tsx
 import { useState } from "react";
 import { useWindowSize } from "react-use";
-import { InfiniteGrids, Item } from "../lib/components/InfiniteGrids";
+import { InfiniteGrids, Item } from "infinite-grids";
 
 export const App = () => {
   const [items, setItems] = useState<Item[]>(initialItems);
@@ -84,14 +84,14 @@ and caching enabled on images to help load faster based on the container size.
 
 | Property               | Type            | Default                   | Description
 | ---------------------- | --------------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `stories`              | [Object] | `required`                | An array of objects with `img` and `id` as required fields (could have other fields as well).                                                                                          |
-| `loadMore` ⚡️        | Function        | `required`                      | A function to that fires when the user scrolls to the bottom of the grids container.                                                                                                              |
+| `items`              | [Object] | `required`                | An array of object `Item` with `img` and `id` as required fields (could have other fields as well).                                                                                          |
+| `loadMore` ⚡️        | Function        | `required`                      | A function that fires when the user scrolls to the end of the grids container.                                                                                                              |
 | `hasMoreItems`      | Boolean          | `true`                      | A boolean value to specify if there are more items to load.                                                                                                                   |
 | `horizontalGap`               | Number       | `required`             | Horizontal spacing between grid items.                                                                                                         |
 | `verticalGap`               | Number       | `required`             | Vertical spacing between grid items.                                                                                                         |
-| `renderItems`               | Function       | `required`             | Function with the item as parameter to be used to return the component to render as each grid.                                                                                                         |
-| `loader`               | Component       | `required`             | Component to render when user has scrolled to the bottom and more data is being fetched.                                                                                                        |
-| `numberOfColumns`               | Number       | `required`             | Specify the number of columns to be rendered for the layout (I'd recommend to keep this value dynamic as show in the example).                                                                                                         |
+| `renderItems`               | Function       | `required`             | Function with item as parameter to return the grid component.                                                                                                         |
+| `loader`               | Component       | `required`             | Component to render when user has scrolled to the end and more data is being fetched.                                                                                                        |
+| `numberOfColumns`               | Number       | `required`             | Specify the number of columns to be rendered for the layout (I'd recommend to keep this value dynamic as shown in the example).                                                                                                         |
 
 
 ## Development
